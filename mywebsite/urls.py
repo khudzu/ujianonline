@@ -5,4 +5,4 @@ urlpatterns = [
 	re_path(r'^blog/', include('blog.urls',namespace = 'blog')),
     re_path(r'^$', views.index, name='index'),
     re_path(r'^admin/', admin.site.urls),
-]
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
